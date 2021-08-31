@@ -2,12 +2,10 @@ package ru.stas.demo.service;
 
 
 import org.springframework.stereotype.Service;
-import ru.stas.demo.dao.RoleDao;
 import ru.stas.demo.model.Role;
 import ru.stas.demo.model.User;
 import ru.stas.demo.repo.RoleRepo;
 
-import javax.annotation.PostConstruct;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;

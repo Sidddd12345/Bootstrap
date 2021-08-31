@@ -1,32 +1,21 @@
 package ru.stas.demo.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.stas.demo.config.SecurityConfig;
-import ru.stas.demo.dao.UserDao;
+
 import ru.stas.demo.model.User;
 import ru.stas.demo.repo.UserRepo;
 
-import javax.annotation.PostConstruct;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.PersistenceContext;
 import java.util.List;
 
 
 @Service
 @Transactional
 public class UserServiceImpl implements UserService, UserDetailsService {
-
-
-//    @PersistenceContext
-//    private EntityManagerFactory entityManagerFactory;
 
     private final UserRepo userRepo;
 
