@@ -1,15 +1,12 @@
 package ru.stas.demo.model;
 
 import org.springframework.security.core.GrantedAuthority;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class Role implements GrantedAuthority {
+@Table(name = "Role")
+public class Role implements GrantedAuthority{
     @Id
     private Long id;
     @Column
@@ -44,5 +41,10 @@ public class Role implements GrantedAuthority {
     @Override
     public String getAuthority() {
         return role;
+    }
+
+    @Override
+    public String toString() {
+        return role.replaceAll("ROLE_","");
     }
 }
