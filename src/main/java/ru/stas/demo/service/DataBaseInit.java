@@ -1,6 +1,5 @@
 package ru.stas.demo.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.stas.demo.model.Role;
 import ru.stas.demo.model.User;

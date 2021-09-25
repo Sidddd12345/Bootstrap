@@ -7,9 +7,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import ru.stas.demo.model.User;
 import ru.stas.demo.service.RoleService;
-import ru.stas.demo.service.RoleServiceImpl;
 import ru.stas.demo.service.UserService;
-import ru.stas.demo.service.UserServiceImpl;
+
 
 
 import javax.validation.Valid;

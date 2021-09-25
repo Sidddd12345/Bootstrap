@@ -1,6 +1,5 @@
 package ru.stas.demo.service;
 
-import ru.stas.demo.model.Role;
 import ru.stas.demo.model.User;
 
 import java.util.List;
