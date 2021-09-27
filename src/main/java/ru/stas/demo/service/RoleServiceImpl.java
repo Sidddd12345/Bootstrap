@@ -38,9 +38,9 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @PostConstruct
-    public void initDB(){
-        Role admin = new Role(1L,"ROLE_ADMIN");
-        Role user = new Role(2L,"ROLE_USER");
+    public void initDB() {
+        Role admin = new Role(1L, "ROLE_ADMIN");
+        Role user = new Role(2L, "ROLE_USER");
         roleRepo.save(admin);
         roleRepo.save(user);
 //        roleRepo.flush();

@@ -10,7 +10,6 @@ import ru.stas.demo.service.RoleService;
 import ru.stas.demo.service.UserService;
 
 
-
 import javax.validation.Valid;
 
 @Controller

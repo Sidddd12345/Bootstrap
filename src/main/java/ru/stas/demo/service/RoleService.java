@@ -6,8 +6,9 @@ import ru.stas.demo.model.User;
 import java.util.List;
 
 public interface RoleService {
-     List<Role> findAll();
-     void setRoles(User user, String[] role);
+    List<Role> findAll();
+
+    void setRoles(User user, String[] role);
 
 
 }

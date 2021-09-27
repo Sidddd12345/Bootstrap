@@ -21,9 +21,9 @@ public class DataBaseInit {
     }
 
     @PostConstruct
-    public void initDB(){
-        Role adminRole = new Role(1L,"ROLE_ADMIN");
-        Role userRole = new Role(2L,"ROLE_USER");
+    public void initDB() {
+        Role adminRole = new Role(1L, "ROLE_ADMIN");
+        Role userRole = new Role(2L, "ROLE_USER");
         roleRepo.save(adminRole);
         roleRepo.save(userRole);
         User user = new User();
@@ -35,7 +35,7 @@ public class DataBaseInit {
         user.setName("stas");
         user.setPassword("$2a$12$XxQJ5KwZ3RsYPBnvEVuxSObQCnKQIdGUUPyCFIpNoAR0d75NfDHHC");
         Set<Role> roleSet = new HashSet<>();
-        roleSet.add(new Role(1L,"ROLE_ADMIN"));
+        roleSet.add(new Role(1L, "ROLE_ADMIN"));
         user.setRoles(roleSet);
         userRepo.save(user);
     }

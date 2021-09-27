@@ -1,12 +1,13 @@
 package ru.stas.demo.model;
 
 import org.springframework.security.core.GrantedAuthority;
+
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table(name = "roles")
-public class Role implements GrantedAuthority{
+public class Role implements GrantedAuthority {
     @Id
     private Long id;
     @Column
@@ -45,6 +46,6 @@ public class Role implements GrantedAuthority{
 
     @Override
     public String toString() {
-        return role.replaceAll("ROLE_","");
+        return role.replaceAll("ROLE_", "");
     }
 }

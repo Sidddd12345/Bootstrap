@@ -1,4 +1,5 @@
 package ru.stas.demo.service;
+
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -25,7 +26,8 @@ public class UserServiceImpl implements UserDetailsService, UserService {
     public User findById(long id) {
         return userRepo.getOne(id);
     }
-    public User findByUsername(String username){
+
+    public User findByUsername(String username) {
         return userRepo.findUserByUsername(username);
     }
 
@@ -33,15 +35,16 @@ public class UserServiceImpl implements UserDetailsService, UserService {
     @Transactional
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = findByUsername(username);
-        if (user == null){
-            throw  new UsernameNotFoundException(String.format("User '%s' not found",username));
+        if (user == null) {
+            throw new UsernameNotFoundException(String.format("User '%s' not found", username));
         }
-        return new org.springframework.security.core.userdetails.User(user.getUsername(),user.getPassword(), user.getAuthorities());
+        return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), user.getAuthorities());
     }
 
     public List<User> findAll() {
         return userRepo.findAll();
     }
+
     @Transactional
     public void saveUser(User user) {
         String password = user.getPassword();
